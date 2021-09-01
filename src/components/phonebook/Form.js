@@ -1,5 +1,5 @@
 import { Component } from "react";
-const { v4: uuidv4 } = require('uuid');
+
 
 class Form extends Component{
     state = {
@@ -17,14 +17,16 @@ class Form extends Component{
   
   handleSubmit = e => {
       e.preventDefault()
-      this.props.onSubmit(this.state)
+      this.props.onSubmit(this.state.contacts)
       this.reset()
-    console.log(this.state)
+
+      this.setState({contacts: ''})
+    
     }
     
     reset = () => {
         this.setState({
-        contacts: [],
+     
     name: '',
   number: ''
     })
@@ -32,7 +34,8 @@ class Form extends Component{
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}> 
+            <div>
+                <form onSubmit={this.handleSubmit}> 
            <label>
              Name
              <input
@@ -58,7 +61,12 @@ class Form extends Component{
              
            </label>
            <button type="submit">Add contact</button>
-         </form>
+            </form>
+                <h2>Contacts</h2>
+                <ul>
+                
+              </ul>
+            </div>
         );
     }
 }
