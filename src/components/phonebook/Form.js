@@ -17,8 +17,17 @@ class Form extends Component{
   handleSubmit = e => {
       e.preventDefault()
       this.props.onSubmit(this.state)
+      this.reset()
     console.log(this.state)
-  }
+    }
+    
+    reset = () => {
+        this.setState({
+        contacts: [],
+    name: '',
+  number: ''
+    })
+    }
 
     render() {
         return (
