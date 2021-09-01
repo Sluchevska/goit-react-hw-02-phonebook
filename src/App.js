@@ -8,10 +8,18 @@ class App extends React.Component{
   contacts: [],
   name: ''
   }
+
+  handleInputChange(e) {
+ this.setState({inputValue:e.currentTarget.value})
+}
+
   render() {
      return (
     <div>
-<Input/>
+         <Input
+           type="text"
+           name={this.state.name}
+           onChange={this.handleInputChange} />
     </div>
   );
   }
