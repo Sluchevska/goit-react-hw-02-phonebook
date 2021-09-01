@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-// import Input from './components/phonebook/Input';
 import './App.css';
 import React from 'react';
 
@@ -15,12 +14,17 @@ class App extends React.Component{
       [e.currentTarget.name]: e.currentTarget.value,
      
  })
-}
+  }
+  
+  handleSubmit = e => {
+    e.preventDefault()
+    console.log(this.state)
+  }
 
   render() {
      return (
        <div>
-         <form>
+         <form onSubmit={this.handleSubmit}> 
            <label>
              Name
              <input
@@ -45,6 +49,7 @@ class App extends React.Component{
              />
              
            </label>
+           <button type="submit">Add contact</button>
          </form>
          
     </div>
