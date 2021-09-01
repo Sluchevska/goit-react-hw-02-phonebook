@@ -3,7 +3,8 @@ import { Component } from "react";
 
 class Form extends Component{
     state = {
-        contacts: [],
+      contacts: [],
+       filter: '',
     name: '',
   number: '',
     }
