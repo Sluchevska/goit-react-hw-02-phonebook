@@ -1,14 +1,15 @@
-import Form from './components/phonebook/Form';
-
-import './App.css';
 import React from 'react';
+import ContactForm from './components/ContactForm/ContactForm';
+import ContactList from './components/ContactList/ContactList';
+import Filter from './components/Filter/Filter'
+import './App.css';
+
 const { v4: uuidv4 } = require('uuid');
 
 class App extends React.Component{
   state = {
   contacts: [],
-  //   name: '',
-  // number: '',
+  
   }
 
   addContact = (name, number) => {
@@ -29,9 +30,11 @@ class App extends React.Component{
   render() {
      return (
        <div>
-         <Form onSubmit={this.addContact}
-         />
-         
+         <h1>Phonebook</h1>
+         <ContactForm onSubmit={this.addContact}/>
+         <h2>Contacts</h2>
+  {/* <Filter />
+  <ContactList/> */}
     </div>
   );
   }
