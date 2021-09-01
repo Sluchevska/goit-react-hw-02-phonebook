@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import Input from './components/phonebook/Input';
+// import Input from './components/phonebook/Input';
 import './App.css';
 import React from 'react';
 
@@ -9,16 +9,16 @@ class App extends React.Component{
   name: ''
   }
 
-  handleInputChange(e) {
- this.setState({inputValue:e.currentTarget.value})
+  handleInputChange=e=> {
+ this.setState({name:e.currentTarget.value})
 }
 
   render() {
      return (
     <div>
-         <Input
+         <input
            type="text"
-           name={this.state.name}
+           value={this.state.name}
            onChange={this.handleInputChange} />
     </div>
   );
