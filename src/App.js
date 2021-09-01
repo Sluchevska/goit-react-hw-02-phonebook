@@ -9,17 +9,26 @@ class App extends React.Component{
   name: ''
   }
 
-  handleInputChange=e=> {
+  handleNameChange=e=> {
  this.setState({name:e.currentTarget.value})
 }
 
   render() {
      return (
-    <div>
-         <input
+       <div>
+         <form>
+           <label>
+             Name
+<input
            type="text"
            value={this.state.name}
-           onChange={this.handleInputChange} />
+            onChange={this.handleNameChange} 
+            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+  title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+  required/>
+           </label>
+         </form>
+         
     </div>
   );
   }
