@@ -21,7 +21,7 @@ class App extends React.Component{
        <div>
          <h1>Phonebook</h1>
          <ContactForm onSubmit={this.addContact}/>
-         <h2>Contacts</h2>
+         <h2>Contacts </h2>
   {/* <Filter /> */}
   <ContactList/> 
     </div>
