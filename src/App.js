@@ -3,6 +3,7 @@ import React from 'react';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import Filter from './components/Filter/Filter';
+import { Container } from './App.styled';
 import './App.css';
 
 const { v4: uuidv4 } = require('uuid');
@@ -67,13 +68,13 @@ class App extends React.Component{
      const { filter } = this.state;
   
      return (
-       <div>
+       <Container>
          <h1>Phonebook</h1>
          <ContactForm onSubmit={this.addContact}/>
          <h2>Contacts</h2>
          <Filter value={filter} onChange={this.changeFilter} />
          <ContactList contacts={this.getVisibleContacts()} onRemove={ this.deleteContact}/>
-    </div>
+    </Container>
   );
   }
 

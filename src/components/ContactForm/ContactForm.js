@@ -1,7 +1,9 @@
 import { Component } from "react";
+import { LabelInput, Input, Button } from "./ContactForm.styled";
 
 
-class Form extends Component{
+
+class FormInput extends Component{
     state = {
       contacts: [],
        filter: '',
@@ -38,9 +40,10 @@ class Form extends Component{
         return (
             <div>
                 <form onSubmit={this.handleSubmit}> 
-           <label>
+           <LabelInput>
              Name
-             <input
+               </LabelInput>
+             <Input
               type="text"
               name="name"
                value={this.state.name}
@@ -48,10 +51,11 @@ class Form extends Component{
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
   title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
   required/>
-           </label>
-           <label>
+         
+           <LabelInput>
              Number
-             <input
+               </LabelInput>
+             <Input
                type="tel"
                name="number"
                value={this.state.number}
@@ -61,8 +65,8 @@ class Form extends Component{
   required
              />
              
-           </label>
-           <button type="submit">Add contact</button>
+         
+           <Button type="submit">Add contact</Button>
             </form>
         
             </div>
@@ -70,4 +74,4 @@ class Form extends Component{
     }
 }
 
-export default Form
+export default FormInput

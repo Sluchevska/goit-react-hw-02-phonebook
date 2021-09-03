@@ -1,5 +1,6 @@
-const { Component } = require('react');
+
 import PropTypes from 'prop-types';
+
 
 function ContactList({ contacts, onRemove }) {
     return (
