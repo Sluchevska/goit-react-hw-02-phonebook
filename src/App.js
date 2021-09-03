@@ -20,7 +20,7 @@ class App extends React.Component{
 
   
       addContact = (name, number) => {
-     const Contacts = {
+     const newContact = {
       id: uuidv4(),
       name,
       number
@@ -28,7 +28,7 @@ class App extends React.Component{
      }
     
     this.setState(prevState => ({
-  contacts:[Contacts, ...prevState.contacts]
+  contacts:[newContact, ...prevState.contacts]
 }))
 
    }
