@@ -16,6 +16,21 @@ function ContactList({ contacts, onRemove }) {
             </ContainerItems >
      )
  }
+
+export default ContactList
+
+ContactList.propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string,
+        number: PropTypes.string,
+    })),
+    onRemove: PropTypes.func
+}
+
+
+
+
 // class ContactList extends Component{
 //     state = {
 //   contacts: [
@@ -48,14 +63,4 @@ function ContactList({ contacts, onRemove }) {
 //     }
 // }
 
-export default ContactList
-
-ContactList.propTypes = {
-    contacts: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string,
-        name: PropTypes.string,
-        number: PropTypes.string,
-    })),
-    onRemove: PropTypes.func
-}
 
