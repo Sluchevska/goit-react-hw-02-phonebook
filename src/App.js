@@ -19,11 +19,15 @@ class App extends React.Component{
   }
 
   
-      addContact = (name, number) => {
+  addContact = ({ name, number }) => {
+    if (this.state.contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
+      alert(`&{name} is alredy in contacts`)
+      return
+        }
      const newContact = {
       id: uuidv4(),
       name,
-      number
+      number,
 
      }
     
