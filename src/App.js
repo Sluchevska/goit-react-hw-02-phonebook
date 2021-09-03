@@ -21,9 +21,13 @@ class App extends React.Component{
   
   addContact = ({ name, number }) => {
     if (this.state.contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
-      alert(`&{name} is alredy in contacts`)
+      alert(`${name} is alredy in contacts`)
       return
-        }
+    }
+    else if (this.state.contacts.find(contact => contact.number === number)) {
+       alert(`This number ${number} is alredy in contacts`)
+      return
+    }
      const newContact = {
       id: uuidv4(),
       name,
