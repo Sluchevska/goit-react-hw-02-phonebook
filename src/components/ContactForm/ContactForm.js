@@ -7,7 +7,9 @@ class Form extends Component{
        filter: '',
     name: '',
   number: '',
-    }
+  }
+  
+
      handleChange=e=> {
     this.setState({
       [e.currentTarget.name]: e.currentTarget.value,
@@ -21,8 +23,7 @@ class Form extends Component{
       this.props.onSubmit(this.state)
       this.reset()
 
-      // this.setState({contacts: ''})
-    
+     
     }
     
     reset = () => {

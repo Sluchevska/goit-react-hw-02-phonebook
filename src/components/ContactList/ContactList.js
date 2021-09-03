@@ -13,6 +13,9 @@ class ContactList extends Component{
   name: '',
   number: ''
     }
+
+
+  
       
     render() {
   
@@ -21,7 +24,8 @@ class ContactList extends Component{
                 {this.state.contacts.map(({ id, name, number }) => (
                     <li key={id} name={name} number={number}>
                     <span>{name} </span>
-                    <span>{number}</span>
+                        <span>{number} </span>
+                        <button type="button" > Delete contact</button>
                     </li>
                ))}
             </ul>
