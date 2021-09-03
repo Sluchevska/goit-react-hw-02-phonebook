@@ -21,6 +21,7 @@ font-style: italic;
 
 export const TitleH2 = styled.h2`
 font-style: italic;
+margin-top:46px;
 
 
 

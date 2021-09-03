@@ -15,11 +15,14 @@ font-weight:700;
 `
 export const ContactItems = styled.li`
 display: flex;
+max-width: 450px;
+justify-content: space-between;
 
-justify-content: space-evenly;
-
-margin-bottom:5px; 
+margin-bottom:5px;
+margin-left:100px; 
 `
+
+
 export const ContainerItems = styled.ul`
 margin-top: 40px;
 `
