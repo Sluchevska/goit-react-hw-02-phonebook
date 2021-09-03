@@ -1,4 +1,5 @@
 const { Component } = require('react');
+import PropTypes from 'prop-types';
 
 function ContactList({ contacts, onRemove }) {
     return (
@@ -46,3 +47,9 @@ function ContactList({ contacts, onRemove }) {
 // }
 
 export default ContactList
+
+ContactList.propTypes = {
+    contacts: PropTypes.array,
+    onRemove: PropTypes.func
+}
+
