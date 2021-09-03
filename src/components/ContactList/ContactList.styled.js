@@ -1,18 +1,8 @@
 import styled from "@emotion/styled";
-
-export const LabelInput = styled.label`
-font-weight: 700;
+export const Span = styled.span`
+font-weight: 500;
 font-style: italic;
 font-size: 17px;
-margin-right:5px;
-`
-
-export const Input = styled.input`
-margin-right: 5px;
-padding: 5px;
-
-border-radius: 5px;
-box-shadow: 1px 2px 3px rgb(85, 42, 85);
 `
 
 export const Button = styled.button`
@@ -22,4 +12,10 @@ box-shadow: 3px 2px 3px rgb(85, 42, 85);
 font-size: 14px;
 font-weight:700;
   
+`
+export const ContactItems = styled.li`
+display: flex;
+justify-content: space-between;
+max-width:350px;
+margin-bottom:5px; 
 `
