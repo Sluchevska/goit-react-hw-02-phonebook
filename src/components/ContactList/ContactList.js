@@ -1,16 +1,6 @@
 const { Component } = require('react');
-const { v4: uuidv4 } = require('uuid');
 
-// function ContactList({ contacts }) {
-//     return (
-//        <ul>
-//           {contacts.map(({ id, name, number }) => (
-//                   <li key={id} name={name} number={number} />
-//                ))}
-//             </ul> 
-//     )
-// }
-//  
+ 
 class ContactList extends Component{
     state = {
   contacts: [
@@ -23,8 +13,7 @@ class ContactList extends Component{
   name: '',
   number: ''
     }
-    
-   
+      
     render() {
   
         return (
