@@ -1,5 +1,15 @@
 const { Component } = require('react');
 const { v4: uuidv4 } = require('uuid');
+
+// function ContactList({ contacts }) {
+//     return (
+//        <ul>
+//           {contacts.map(({ id, name, number }) => (
+//                   <li key={id} name={name} number={number} />
+//                ))}
+//             </ul> 
+//     )
+// }
 //  
 class ContactList extends Component{
     state = {
@@ -31,7 +41,10 @@ class ContactList extends Component{
         return (
             <ul>
                 {this.state.contacts.map(({ id, name, number }) => (
-                  <li key={id} name={name} number={number} />
+                    <li key={id} name={name} number={number}>
+                    <span>{name} </span>
+                    <span>{number}</span>
+                    </li>
                ))}
             </ul>
         )
