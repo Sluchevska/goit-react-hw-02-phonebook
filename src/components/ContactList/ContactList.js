@@ -24,18 +24,7 @@ class ContactList extends Component{
   number: ''
     }
     
-//     addContact = ({id,name, number}) => {
-//      const Contacts = {
-//       id,
-//       name,
-//       number
-
-//     }
-//     this.setState(prevState => ({
-//   contacts:[Contacts, ...prevState.contacts]
-// }))
-
-//     }
+   
     render() {
   
         return (

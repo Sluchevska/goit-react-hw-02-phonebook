@@ -18,6 +18,22 @@ class App extends React.Component{
   
   }
 
+  changeFilter = (e) => {
+    this.setState({filter: e.currentTarget.value})
+  }
+   addContact = (id,name, number) => {
+     const Contacts = {
+      id,
+      name,
+      number
+
+    }
+    this.setState(prevState => ({
+  contacts:[Contacts, ...prevState.contacts]
+}))
+
+    }
+
  
  
 
@@ -27,7 +43,7 @@ class App extends React.Component{
          <h1>Phonebook</h1>
          <ContactForm onSubmit={this.addContact}/>
          <h2>Contacts</h2>
-  {/* <Filter /> */}
+         {/* <Filter value={this.filter} onChange={this.changeFilter} /> */}
          <ContactList contacts={ this.contacts}/>
     </div>
   );

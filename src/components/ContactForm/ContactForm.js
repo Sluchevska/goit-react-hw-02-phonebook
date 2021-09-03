@@ -18,10 +18,10 @@ class Form extends Component{
   
   handleSubmit = e => {
       e.preventDefault()
-      this.props.onSubmit(this.state.contacts)
+      this.props.onSubmit(this.state)
       this.reset()
 
-      this.setState({contacts: ''})
+      // this.setState({contacts: ''})
     
     }
     
