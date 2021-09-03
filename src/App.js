@@ -3,7 +3,7 @@ import React from 'react';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import Filter from './components/Filter/Filter';
-import { Container } from './App.styled';
+import { Container, TitleH1, TitleH2 } from './App.styled';
 import './App.css';
 
 const { v4: uuidv4 } = require('uuid');
@@ -69,7 +69,7 @@ class App extends React.Component{
   
      return (
        <Container>
-         <h1>Phonebook</h1>
+         <TitleH1>Phonebook</TitleH1>
          <ContactForm onSubmit={this.addContact}/>
          <h2>Contacts</h2>
          <Filter value={filter} onChange={this.changeFilter} />

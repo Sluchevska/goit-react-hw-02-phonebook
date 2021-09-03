@@ -15,7 +15,11 @@ font-weight:700;
 `
 export const ContactItems = styled.li`
 display: flex;
-justify-content: space-between;
-max-width:350px;
+
+justify-content: space-evenly;
+
 margin-bottom:5px; 
+`
+export const ContainerItems = styled.ul`
+margin-top: 40px;
 `

@@ -1,11 +1,11 @@
 
 import PropTypes from 'prop-types';
-import { Span,Button, ContactItems } from './ContactList.styled';
+import { Span,Button, ContactItems, ContainerItems } from './ContactList.styled';
 
 
 function ContactList({ contacts, onRemove }) {
     return (
-         <ul>
+         <ContainerItems >
                 {contacts.map(({ id, name, number}) => (
                     <ContactItems key={id} name={name} number={number}>
                     <Span>{name}: </Span>
@@ -13,7 +13,7 @@ function ContactList({ contacts, onRemove }) {
                         <Button type="button" onClick={()=>onRemove(id)} > Delete contact</Button>
                     </ContactItems>
                ))}
-            </ul>
+            </ContainerItems >
      )
  }
 // class ContactList extends Component{
