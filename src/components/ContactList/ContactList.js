@@ -49,7 +49,11 @@ function ContactList({ contacts, onRemove }) {
 export default ContactList
 
 ContactList.propTypes = {
-    contacts: PropTypes.array,
+    contacts: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string,
+        number: PropTypes.string,
+    })),
     onRemove: PropTypes.func
 }
 
