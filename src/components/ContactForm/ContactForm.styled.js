@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-
 export const LabelInput = styled.label`
 font-weight: 700;
 font-style: italic;
