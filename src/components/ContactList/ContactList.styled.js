@@ -16,6 +16,7 @@ font-weight:700;
 export const ContainerItems = styled.ul`
 margin-top: 40px;
 padding-right:40px;
+padding-left:40px;
 `
 
 export const ContactItems = styled.li`
