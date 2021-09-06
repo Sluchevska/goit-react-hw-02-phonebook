@@ -3,8 +3,6 @@ import { LabelInput, Input, Button } from './ContactForm.styled';
 
 class FormInput extends Component {
   state = {
-    contacts: [],
-    filter: '',
     name: '',
     number: '',
   };

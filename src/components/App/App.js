@@ -21,15 +21,15 @@ class App extends React.Component {
   };
 
   addContact = ({ name, number }) => {
-    if (
-      this.state.contacts.find(
+    const doubleName = this.state.contacts.find(
         contact => contact.name.toLowerCase() === name.toLowerCase(),
-      )
-    ) {
-      alert(`${name} is alredy in contacts`);
+    )
+    const doublePhoneNumber = this.state.contacts.find(contact => contact.number === number)
+    if (doubleName) {
+      alert(`${name} is already in contacts`);
       return;
-    } else if (this.state.contacts.find(contact => contact.number === number)) {
-      alert(`This number ${number} is alredy in contacts`);
+    } else if (doublePhoneNumber) {
+      alert(`This number ${number} is already in contacts`);
       return;
     }
     const newContact = {
